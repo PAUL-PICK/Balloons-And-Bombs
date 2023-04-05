@@ -47,6 +47,7 @@ public class PlayerControllerX : MonoBehaviour {
       // if player collides with money, fireworks
       else if (other.gameObject.CompareTag("Money")) {
          fireworksParticle.Play();
+         gameOver = false;
          playerAudio.PlayOneShot(moneySound, 1.0f);
          Destroy(other.gameObject);
 
